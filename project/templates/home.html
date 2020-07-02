@@ -3,12 +3,17 @@
 <head>
 	{% load static %}  
 	<link href="{% static 'css/navC.css' %}" rel="stylesheet">  
+	<link href="{% static 'css/home.css' %}" rel="stylesheet">
 	<meta charset="UTF-8">
 	<title>Home Page</title>
 </head>
 <body>
 	{%include nav%}
-	<h1>Home Page</h1>
+	<div id="homeC">
+		
+		<div id="bgImg" style="background-image:url('{% static 'assets/Lighthouse.jpg' %}');background-size:100% 100%;"></div>
+
+	</div>
 	
 </body>
 </html>
