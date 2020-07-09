@@ -1,19 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	{% load static %}  
-	<link href="{% static 'css/navC.css' %}" rel="stylesheet">  
+	{% load static %}   
 	<link href="{% static 'css/home.css' %}" rel="stylesheet">
 	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Home Page</title>
 </head>
 <body>
-	{%include nav%}
-	<div id="homeC">
-		
-		<div id="bgImg" style="background-image:url('{% static 'assets/Lighthouse.jpg' %}');background-size:100% 100%;"></div>
-
+	<div id="header-bg" style="background-image:url('{% static 'assets/header_bg.jpeg' %}');background-size:100% 100%;">
+		{%include nav%}
 	</div>
+	
+	
 	
 </body>
 </html>

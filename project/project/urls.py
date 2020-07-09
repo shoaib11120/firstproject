@@ -24,4 +24,10 @@ urlpatterns = [
       path('blog/',
       	include('blog.urls',
       		namespace='blog')),
+      path('',
+        views.home,
+        name='home'),
+      path('category/',
+        views.category,
+        name='category')
 ]
