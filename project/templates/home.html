@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	{% load static %}   
-	<link href="{% static 'css/home.css' %}" rel="stylesheet">
+	<link href="{% static 'css/home2.css' %}" rel="stylesheet">
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Home Page</title>
@@ -12,7 +12,29 @@
 		{%include nav%}
 	</div>
 	
-	
-	
+	<div id="latestC">
+		<div id="LC">
+			{% for post in posts %}
+				<div class="LPC">
+					<div class="LPCon" >
+						<div class="bgImg" style="background-image:url('{% static 'assets/post_bg.jpg' %}');background-size:100% 100%;" onclick="blogdetail('{{post.get_absolute_url}}')"></div>
+						<div class="TPC">
+							<h2>
+								{{post.title}}
+							</h2>
+							
+						</div>
+						
+					</div>
+				</div>
+			{% endfor %}
+			<!--<div id="PSel">
+				<span class="PSS"></span>
+				<span class="PSS"></span>
+				<span class="PSS"></span>
+			</div>-->
+		</div>
+	</div>
+	<script type="text/javascript" src="{% static 'js/home.js' %}"></script>
 </body>
 </html>

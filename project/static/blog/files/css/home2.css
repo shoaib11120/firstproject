@@ -36,9 +36,7 @@ body{
 	justify-content: center;
 }
 .navB{
-	margin: 10px 20px 10px 20px;
 	
-	font-size: 20px;
 }
 .navB a{
 	text-decoration: none;
@@ -55,23 +53,94 @@ body{
 @media only screen and (max-width: 500px) {
   #header-bg{
 	width: auto;
-	height: 40vh;
+	height: 30vh;
   }
-  
+  .navB{
+  	font-size: 15px;
+  	margin: 10px
+  }
+  #navP{
+  	margin: 3px 20px 10px -5px;
+  }
+  #LC{
+  	height: 30vh;
+  }
 }
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 500px) {
   #header-bg{
 	width: auto;
-	height: 50vh;
+	height: 45vh;
   }
-  
+  .navB{
+  	font-size: 18px;
+  	margin: 10px 15px 10px 15px;
+  }
+  #LC{
+  	height: 60vh;
+  }
 }
-/* Medium devices (landscape tablets, 768px and up) */
+/* Medium devices (desktop) */
 @media only screen and (min-width: 900px) {
   #header-bg{
 	width: auto;
 	height: 60vh;
   }
-  
+  .navB{
+  	font-size: 20px;
+  	margin: 10px 20px 10px 20px;
+  }
+  #LC{
+  	height: 70vh;
+  }
 }
+#latestC{
+	display: block;
+	width: 100%;
+	height: auto;
+}
+#LC{
+	width: 100%;
+	padding: 5vh 0 5vh 0;
+	text-align: center;
+	text-align: -webkit-center;
+}
+.LPC{
+	width: 70%;
+	height: 90%;
+	display: none;
+}
+.LPCon{
+	width: 100%;
+	height: 100%;
+	cursor: pointer;
+	z-index: 5;
+}
+.TPC{
+	position: relative;
+	top: -100%;
+	display: block;
+	text-align: center;
+}
+.bgImg{
+	position: relative;
+	filter: brightness(50%);
+	width: 100%;
+	height: 100%;
+}
+.TPC h2{
+	text-decoration: none;
+	color: white;
+}
+/*#PSel{
+	width: auto;
+	height: 50px;
+	display: flex;
+	align-content: center;
+	justify-content: center;
+}
+.PSS{
+	width: 40px;
+	height: 40px;
+	border: 2px solid #fff;
+}*/
