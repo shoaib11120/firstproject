@@ -6,14 +6,8 @@ from blog.models import Post
 def home(request):
 	posts=Post.published.order_by('-publish')[:3]
 	return render(request,
-		'home.html',
-		{'posts':posts,'nav':'nav.html'})
-
-def category(request):
-	return render(request,'category.html',{'nav':'nav.html'})
-
-def post_latest(request):
-	posts=Post.published.order_by('-pub_date')[:3]
-	return render(request,
-		'home.html',
-		{'posts':posts})
+		'home/home.html',
+		{'posts':posts,
+		'nav':'home/files/nav.html',
+		'cssF':'home/files/css.html',
+		'jsF':'home/files/js.html'})
