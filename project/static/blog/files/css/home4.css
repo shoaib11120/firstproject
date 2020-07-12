@@ -63,7 +63,10 @@ body{
   	margin: 3px 20px 10px -5px;
   }
   #LC{
-  	height: 30vh;
+  	height: 40vh;
+  }
+  .LPC{
+  	width: 85%;
   }
 }
 /* Medium devices (landscape tablets, 768px and up) */
@@ -79,6 +82,9 @@ body{
   #LC{
   	height: 60vh;
   }
+  .LPC{
+  	width: 70%;
+  }
 }
 /* Medium devices (desktop) */
 @media only screen and (min-width: 900px) {
@@ -93,6 +99,9 @@ body{
   #LC{
   	height: 70vh;
   }
+  .LPC{
+  	width: 70%;
+  }
 }
 #latestC{
 	display: block;
@@ -106,9 +115,9 @@ body{
 	text-align: -webkit-center;
 }
 .LPC{
-	width: 70%;
 	height: 90%;
 	display: none;
+	transition: 0.5s;
 }
 .LPCon{
 	width: 100%;
