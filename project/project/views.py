@@ -10,4 +10,5 @@ def home(request):
 		{'posts':posts,
 		'nav':'home/files/nav.html',
 		'cssF':'home/files/css.html',
-		'jsF':'home/files/js.html'})
+		'jsF':'home/files/js.html',
+		'myCarousel':'home/files/myCarousel.html'})
