@@ -63,8 +63,8 @@ body{
   	margin: 3px 20px 10px -5px;
   }
   #latestC{
-  	height: 50vh;
-   	width: 90%;
+  	height: 40vh;
+   	width: 400px;
   }
   #mycarousel{
 	margin: 3vh 0;
@@ -83,7 +83,7 @@ body{
   }
   #latestC{
   	height: 40vh;
-   	width: 75%;
+   	width: 545px;
   }
   #mycarousel{
 	margin: 5vh 0;
@@ -102,12 +102,15 @@ body{
   }
   #latestC{
   	height: 40vh;
-   	width: 75%;
+   	width: 545px;
   }
   #mycarousel{
 	margin: 5vh 0;
   	height: 45vh;
   }
+}
+#latestC img{
+	filter: brightness(50%);
 }
 #mycarousel{
 	width: 100%;

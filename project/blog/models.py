@@ -2,6 +2,9 @@ from django.db import models
 from django.utils import timezone
 from django.contrib.auth.models import User
 from django.urls import reverse
+from uuid import uuid4
+import os
+
 
 #Manager of published posts
 class PublishedManager(models.Manager):
@@ -9,6 +12,19 @@ class PublishedManager(models.Manager):
 		return super(PublishedManager,
 			self).get_queryset()\
 		.filter(status='published')
+
+#change image name
+def path_and_rename(instance,filename):
+	upload_to='blogThumbnails'
+	ext=filename.split('.')[-1]
+	if instance.pk:
+		filename='{}.{}'.format(instance.pk,
+			ext)
+	else:
+		filename='{}.{}'.format(uuid4().hex,
+			ext)
+	return os.path.join(upload_to,filename)
+
 
 # Create your models here.
 class Post(models.Model):
@@ -23,6 +39,8 @@ class Post(models.Model):
 	author = models.ForeignKey(User,
 		on_delete=models.CASCADE,
 		related_name='blog_posts')
+	thumbnail=models.ImageField(upload_to=path_and_rename,
+		default='default.jepg')
 	body=models.TextField()
 	publish=models.DateTimeField(default=timezone.now)
 	created=models.DateTimeField(auto_now_add=True)
