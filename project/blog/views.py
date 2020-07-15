@@ -7,7 +7,7 @@ def post_list(request):
 	posts=Post.published.all()
 	return render(request,
 		'blog/post/list.html',
-		{'posts':posts})
+		{'posts':posts,'':''})
 
 def post_detail(request,year,month,day,post):
 	post=get_object_or_404(Post,
@@ -18,4 +18,7 @@ def post_detail(request,year,month,day,post):
 		publish__day=day,)
 	return render(request,
 		'blog/post/detail.html',
-		{'post':post})
+		{'post':post,
+		'nav':'blog/post/files/nav.html',
+		'js':'blog/post/files/js.html',
+		'css':'blog/post/files/css.html'})

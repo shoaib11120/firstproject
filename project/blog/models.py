@@ -17,6 +17,7 @@ class PublishedManager(models.Manager):
 def path_and_rename(instance,filename):
 	upload_to='blogThumbnails'
 	ext=filename.split('.')[-1]
+	print(instance.pk)
 	if instance.pk:
 		filename='{}.{}'.format(instance.pk,
 			ext)
@@ -40,7 +41,7 @@ class Post(models.Model):
 		on_delete=models.CASCADE,
 		related_name='blog_posts')
 	thumbnail=models.ImageField(upload_to=path_and_rename,
-		default='default.jepg')
+		default='default.jpg')
 	body=models.TextField()
 	publish=models.DateTimeField(default=timezone.now)
 	created=models.DateTimeField(auto_now_add=True)

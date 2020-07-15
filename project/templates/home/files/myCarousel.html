@@ -13,8 +13,8 @@
 						  	
 						  		{% if data == "true" %}
 						  			<div class="carousel-item  active">
-							      		<img src="{{ post.thumbnail.url }}"  class="d-block w-100" onclick="blogdetail('{{post.get_absolute_url}}')" style="height:-webkit-fill-available;">
-							      		<div class="carousel-caption" onclick="blogdetail('{{post.get_absolute_url}}')">
+							      		<img src="{{ post.thumbnail.url }}"  class="d-block w-100 pointerCursor" onclick="blogdetail('{{post.get_absolute_url}}')" style="height:-webkit-fill-available;">
+							      		<div class="carousel-caption pointerCursor" onclick="blogdetail('{{post.get_absolute_url}}')">
 							        		<h5>{{post.title}}</h5>
 							     		</div>
 							  	  	</div>
@@ -22,8 +22,8 @@
 						  			{% define "false" as data %}
 						  		{% else %}
 								    <div class="carousel-item ">
-								      <img src="{{ post.thumbnail.url }}" class="d-block w-100" onclick="blogdetail('{{post.get_absolute_url}}')" style="height:-webkit-fill-available;">
-								      <div class="carousel-caption" onclick="blogdetail('{{post.get_absolute_url}}')">
+								      <img src="{{ post.thumbnail.url }}" class="d-block w-100 pointerCursor" onclick="blogdetail('{{post.get_absolute_url}}')" style="height:-webkit-fill-available;">
+								      <div class="carousel-caption pointerCursor" onclick="blogdetail('{{post.get_absolute_url}}')">
 								        <h5>{{post.title}}</h5>
 								      </div>
 								    </div>

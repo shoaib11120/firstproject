@@ -35,15 +35,13 @@ body{
 	align-content: center;
 	justify-content: center;
 }
-.navB{
-	
-}
+
 .navB a{
 	text-decoration: none;
 	color: white;
 }
 #navP{
-	margin: 5px 20px 10px -10px;
+	margin: 10px 20px 6px -0px;
 	background-color: red;
 	width: 30px;
 	height: 30px;
@@ -57,7 +55,7 @@ body{
   }
   .navB{
   	font-size: 15px;
-  	margin: 10px
+  	margin: 10px;
   }
   #navP{
   	margin: 3px 20px 10px -5px;
@@ -79,7 +77,7 @@ body{
   }
   .navB{
   	font-size: 18px;
-  	margin: 10px 15px 10px 15px;
+  	margin: 10px 5px;
   }
   #latestC{
   	height: 40vh;
@@ -98,7 +96,7 @@ body{
   }
   .navB{
   	font-size: 20px;
-  	margin: 10px 20px 10px 20px;
+  	margin: 10px 10px;
   }
   #latestC{
   	height: 40vh;
@@ -112,9 +110,21 @@ body{
 #latestC img{
 	filter: brightness(50%);
 }
+
 #mycarousel{
 	width: 100%;
 	display: flex;
 	align-content: center;
 	justify-content: center;
+}
+.navB>a{
+	padding: 3px 8px;
+	-webkit-transition:0.3s; 
+}
+.navB>a:hover{
+	background-color: #ff3e4d;
+	color: black
+}
+.pointerCursor{
+	cursor: pointer;
 }
