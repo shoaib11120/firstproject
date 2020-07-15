@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	{% load static %}
+	{%include cssF%}
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Home Page</title>
+</head>
+<body>
+	<div id="header-bg" style="background-image:url('{% static 'assets/header_bg.jpeg' %}');background-size:100% 100%;">
+		{%include nav%}
+	</div>
+	
+	<div id="mycarousel">
+		{% include myCarousel %}
+	</div>
+	{%include jsF%}
+</body>
+</html>

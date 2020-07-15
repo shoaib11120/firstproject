@@ -1,0 +1,25 @@
+{% extends "blog/base.html" %}
+{% block title %}My Blog{% endblock %}
+{% block css %}
+	{%include css%}
+{% endblock %}
+{% block js %}
+	{%include js%}
+{% endblock %}
+{% block content %}
+	<div id="navBar">
+		{% include nav %}
+	</div>
+	{% for post in posts %}
+		<h2>
+			<a href="{{post.get_absolute_url}}">
+				{{post.title}}
+			</a>
+		</h2>
+		<img src="{{ post.thumbnail.url }}">
+		<p class="date">
+			Published on {{post.publish}} by {{post.author}}
+		</p>
+		{{post.body|truncatewords:30|linebreaks}}
+	{% endfor %}
+{% endblock %}

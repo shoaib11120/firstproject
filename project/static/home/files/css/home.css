@@ -1,0 +1,154 @@
+#header-bg{
+	display: flex;
+	direction: horizontal;
+	align-content: center;
+	justify-content: center;
+	position: sticky;
+	margin: 0;
+	padding: 0;
+	
+}
+body{
+	width: auto;
+	height: 100vh;
+	background: #2F363F;
+}
+#nav{
+	width: 100%;
+	height: auto;
+	max-height: 80px;
+	align-content: center;
+	
+	position: absolute;
+	z-index: 1;
+	top: auto;
+	bottom: 0;
+}
+#navC{
+	background-color: transparent;
+	position: relative;
+	z-index: 1;
+	height: auto;
+	max-height: 70px;
+	width: auto;
+	display: flex;
+	align-content: center;
+	justify-content: center;
+}
+
+.navB a{
+	text-decoration: none;
+	color: white;
+}
+#navP{
+	margin: 10px 20px 6px -0px;
+	background-color: red;
+	width: 30px;
+	height: 30px;
+	border-radius: 50%;
+}
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 500px) {
+  #header-bg{
+	width: auto;
+	height: 30vh;
+  }
+  .navB{
+  	font-size: 15px;
+  	margin: 10px;
+  }
+  #navP{
+  	margin: 3px 20px 10px -5px;
+  }
+  #latestC{
+  	height: 40vh;
+   	width: 400px;
+  }
+  #mycarousel{
+	margin: 3vh 0;
+  	height: 55vh;
+  }
+  .carousel-caption{
+	right: 5%;
+	left: 5%;
+	text-align: -webkit-left;
+	}
+	.carousel-caption h5{
+		font-size: 1.1rem;
+	}
+}
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 500px) {
+  #header-bg{
+	width: auto;
+	height: 45vh;
+  }
+  .navB{
+  	font-size: 18px;
+  	margin: 10px 5px;
+  }
+  #latestC{
+  	height: 40vh;
+   	width: 545px;
+  }
+  #mycarousel{
+	margin: 5vh 0;
+  	height: 45vh;
+  }
+  .carousel-caption{
+	right: 5%;
+	left: 5%;
+	text-align: -webkit-left;
+	}
+	.carousel-caption h5{
+		font-size: 1.2rem;
+	}
+}
+/* Medium devices (desktop) */
+@media only screen and (min-width: 900px) {
+  #header-bg{
+	width: auto;
+	height: 60vh;
+  }
+  .navB{
+  	font-size: 20px;
+  	margin: 10px 10px;
+  }
+  #latestC{
+  	height: 40vh;
+   	width: 545px;
+  }
+  #mycarousel{
+	margin: 5vh 0;
+  	height: 45vh;
+  }
+  .carousel-caption{
+	right: 5%;
+	left: 5%;
+	text-align: -webkit-left;
+	}
+	.carousel-caption h5{
+		font-size: 1.3rem;
+	}
+}
+#latestC img{
+	filter: brightness(50%);
+}
+
+#mycarousel{
+	width: 100%;
+	display: flex;
+	align-content: center;
+	justify-content: center;
+}
+.navB>a{
+	padding: 3px 8px;
+	-webkit-transition:0.3s; 
+}
+.navB>a:hover{
+	background-color: #ff3e4d;
+	color: black;
+}
+.pointerCursor{
+	cursor: pointer;
+}
