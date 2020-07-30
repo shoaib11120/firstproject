@@ -1,0 +1,171 @@
+/* #region  common */
+#content{
+	display: flex;
+	width: 100%;
+	justify-content: center;
+}
+#allNews{
+	margin-top: 100px;
+	height: auto;
+	background-color: #535c68;
+	border-radius: 5px;
+	display: flow-root;
+}
+#postList {
+	width: 100%;
+	overflow: hidden;
+	display: flex;
+	height: auto;
+	min-height: 10vh;
+	flex-flow: wrap;
+}
+.postSingle {
+	display: flex;
+	justify-content: center;
+}
+.innerPost {
+	position: relative;
+	overflow: hidden;
+}
+#allNewsHead {
+	display: block;
+	color: #ffffff;
+	font-family: -webkit-pictograqph;
+}
+.postTitle {
+	color: #ffffff;
+	position: absolute;
+	text-transform: capitalize;
+	display: block;
+	top: 0;
+	left: 0;
+	text-align: center;
+	transition: 0.4s;
+
+}
+.postThumbnail {
+	min-width: 100%;
+	height: 100%;
+	border-radius: 3px;
+	filter: brightness(0.7);
+	transition: 0.4s;
+}
+.bodyContainer {
+	bottom: -100%;
+	z-index: 5;
+	transition: 0.4s;
+}
+.activePS>.innerPost>.postTitle {
+	display: none;
+}
+.activePS>.innerPost>.bodyContainer {
+	position: absolute;
+	display: flex;
+	width: 100%;
+	bottom: 0;
+	left: 0;
+	background-color: #c33944;
+	justify-content: center;
+}
+.activePS>.innerPost>.bodyContainer>.innerBody {
+	width: 85%;
+}
+.activePS>.innerPost>.bodyContainer>.innerBody>.postBody {
+	color: #ffffff;
+}
+.activePS>.innerPost>.postThumbnail {
+	filter: brightness(0.3);
+}
+/* #endregion */
+
+
+/* #region  Small devices */
+
+@media only screen and (max-width: 992px) and (orientation: portrait) {
+	#allNews {
+		width: 95%;
+	}
+
+	.postSingle {
+		width: 100%;
+		height: 160px;
+		margin: 8px 0;
+	}
+
+	.innerPost {
+		width: 75%;
+		height: 160px;
+	}
+
+	#allNewsHead {
+		margin: 18px auto 20px 30px;
+		font-size: x-large;
+	}
+
+	.postTitle {
+		font-size: medium;
+		padding: 3px 0;
+		width: 100%;
+
+	}
+
+
+	.activePS>.innerPost>.bodyContainer>.innerBody>.postBody {
+		font-size: 12px;
+	}
+
+}
+
+/* #endregion */
+
+
+
+/* #region  Medium devices */
+
+@media only screen and (max-width: 992px) and (orientation: landscape) {}
+
+/* #endregion */
+
+
+
+/* #region  Large devices */
+
+@media only screen and (min-width: 992px) {
+	#allNews {
+		width: 65%;
+	}
+
+	#postList {
+		justify-content: space-around;
+	}
+
+	.postSingle {
+		width: 45%;
+		height: 250px;
+		margin: 8px 0;
+	}
+
+	.innerPost {
+		width: 100%;
+		height: 100%;
+	}
+
+	#allNewsHead {
+		margin: 18px auto 20px 30px;
+		font-size: xx-large;
+	}
+
+	.postTitle {
+		font-size: x-large;
+		padding: 3px 0;
+		width: 100%;
+
+	}
+
+	.activePS>.innerPost>.bodyContainer>.innerBody>.postBody {
+		font-size: 20px;
+	}
+
+}
+
+/* #endregion */
