@@ -22,13 +22,15 @@
 						<img class="postThumbnail" src="{{ post.thumbnail.url }}">
 						
 						<span class="postTitle">{{post.title}}</span>
-						<div class="bodyContainer" onclick="blogdetail('{{post.get_absolute_url}}')">
-							<div class="innerBody">
-								<span class="postBody" onclick="blogdetail('{{post.get_absolute_url}}')">
-									{{post.body|truncatewords:30|linebreaks}}
-								</span>
+						<a href="{{post.get_absolute_url}}">
+							<div class="bodyContainer">
+								<div class="innerBody">
+									<span class="postBody">
+										{{post.body|truncatewords:30|linebreaks}}
+									</span>
+								</div>
 							</div>
-						</div>
+						</a>
 					</div>
 				</div>
 			{% endfor %}
