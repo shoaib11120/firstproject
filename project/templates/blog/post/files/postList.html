@@ -1,0 +1,17 @@
+{% for post in posts %}
+	<div class="postSingle">
+		<div class="innerPost">
+			<img class="postThumbnail" src="{{ post.thumbnail.url }}">	
+			<span class="postTitle">{{post.title}}</span>
+			<a href="{{post.get_absolute_url}}" target="blank">
+				<div class="bodyContainer">
+					<div class="innerBody">
+						<span class="postBody">
+							{{post.body|truncatewords:30|linebreaks}}
+						</span>
+					</div>
+				</div>
+			</a>
+		</div>
+	</div>
+{% endfor %}

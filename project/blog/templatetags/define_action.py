@@ -2,6 +2,6 @@ from django import template
 
 register=template.Library()
 
-@register.simple_tag
-def define(v):
-	return v
+@register.filter(name='Range')
+def Range(x):
+	return range(1,x+1)
