@@ -17,8 +17,8 @@
 		</div>
 		<div id="postList">
 			{% include postList %}
-			{% include postListPaginator with page=posts %}
 		</div>
+		{% include postListPaginator with page=posts %}
 		
 	</div>
 {% endblock %}

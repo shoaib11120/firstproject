@@ -1,12 +1,27 @@
+{% load define_action %}
 <div class="pagination">
     <span class='step-links'>
         {% if page.has_previous %}
             <a href="?page={{ page.previous_page_number }}"></a>
         {% endif %}
-        <span class="current">
+        <span class="pagesContainer">
             {% load define_action %}
             {% for x in page.paginator.num_pages|Range %}
-                <span class="pages">{{x}}</span>
+                {% ifequal x page.number  %}
+                    <a href="?page={{ x }}">
+                        <span class="pages pagesActive">{{x}}</span>
+                    </a>
+                {% else %}
+                    
+                    {% ifequal x|checkForDot:page 'true' %}
+                        <a href="?page={{ x }}">
+                            <span class="pages">{{x}}</span>
+                        </a>
+                    {% endifequal %}
+                    {% ifequal x|checkForDot:page 'false' %}
+                        <span class="dots">.</span>
+                    {% endifequal %}
+                 {% endifequal %}
             {% endfor %}
         </span>
         {% if page.has_next %}

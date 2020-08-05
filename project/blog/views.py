@@ -7,7 +7,7 @@ from .models import Post
 # Create your views here.
 def post_list(request):
 	posts=Post.published.all()
-	paginator = Paginator(posts,2)
+	paginator = Paginator(posts,8)
 	page=request.GET.get('page')
 	try:
 		newPosts=paginator.page(page)

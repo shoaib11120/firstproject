@@ -1,0 +1,29 @@
+.pages {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    color: white;
+    display: -moz-inline-grid;
+    display: -ms-inline-grid;
+    display: inline-grid;
+    justify-content: center;
+}
+.pages:hover,.pagesActive{
+    background-color: #ff3e4d;
+    color: black;
+}
+.pagination{
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    margin:5px auto;
+}
+.pagesContainer a{
+    text-decoration: none;
+}
+.pagesContainer{
+    display: flex;
+}
+.dots{
+    color: white;
+}
