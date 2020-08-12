@@ -1,9 +1,28 @@
 {% extends "blog/base.html" %}
 {% block title %}{{post.title}}{% endblock %}
 {% block content %}
-<h2>{{post.title}}</h2>
-<p class="date">
-	Published on {{post.publish}} by {{post.author}}
-</p>
-{{post.body|linebreaks}}
+{% include css %}
+<div id="navBar">
+	{% include nav %}
+</div>
+<div id="blogContainer">
+	<div id="blogHeader">
+		<img class="blogThumbnail" src="{{post.thumbnail.url}}">
+		<span class="blogTitle">{{post.title}}</span>
+	</div>
+	<div id="blogContents">
+		<div id="innerContents">
+			<span class="date">
+				Published on {{post.publish}} by {{post.author}}
+			</span>
+			<a href="{% url 'blog:postShare' post.id %}" target="_blank">
+				<img class="share" src="/media/share.png" >
+			</a>
+		</div>
+		<span class="body">
+			{{post.body|linebreaks}}
+		</span>
+	</div>
+</div>
+
 {% endblock %}
