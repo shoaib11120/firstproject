@@ -13,14 +13,13 @@ class LoginForm(forms.Form):
 
 # region SignUP Form 
 
-class signUPForm(forms.ModelForm):
+class signUPForm(forms.Form):
     
+    username = forms.CharField()
+    email = forms.CharField(widget=forms.EmailInput)
+    first_name = forms.CharField(label="First Name")
     password=forms.CharField(widget=forms.PasswordInput,label="Password")
     confirm_password=forms.CharField(widget=forms.PasswordInput,label="Confirm Password")
-   
-    class Meta:
-            model = User
-            fields = ('username', 'first_name', 'email')
 
 # endregion
 

@@ -12,19 +12,26 @@ body{
     align-items: center;
 }
 #container{
-    min-width: 23%;
+    min-width: 5%;
     min-height: 5vw;
     background-color: #535C68;
     border-radius: 5px;
     text-align: center;
     padding: 20px;
 }
-.containerToEdit{
-    min-width: 5%;
+#head{
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+#head span{
+    font-size: 3em;
 }
 #profileEditContainer{
     min-width: 95%;
     height: auto;
+}
+.profileEditForm{
+    text-align: -webkit-center;
 }
 .innerForm{
     min-width: 100%;
@@ -35,22 +42,14 @@ body{
 }
 .innerForm input{
     width: 250px;
-    border: none;
+    border: 0px solid black;
     background: transparent;
+    border-radius: 4px;
     outline: none;
     color: white;
-    padding: 3px;
-    margin: -6% 0 0 39%
-}
-.innerForm .inputToEdit{
-    width: 250px;
-    border:none;
-    background: transparent;
-    outline: none;
-    border-bottom: 2px solid black;
-    color:white;
-    padding: 3px;
+    padding: 4px;
     margin: 2px auto 5px 15px;
+    transition: 0.3s;
 }
 .inputButton{
     padding: 5px 10px;
@@ -66,5 +65,18 @@ body{
     background-color: rgba(0, 0, 0, 0.7);
 }
 #submitProfileButton{
+    display: none;
+}
+#photoEditContainer , #photoEditContainer form{
+    text-align: -webkit-center;
+}
+#userPhoto{
+    width: 150px;
+    height: 150px;
+    background-size: 150px 150px;
+    border-radius: 50%;
+    filter: brightness(0.7);
+}
+.innerPhoto input{
     display: none;
 }

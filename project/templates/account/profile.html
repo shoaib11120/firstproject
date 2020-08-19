@@ -6,17 +6,36 @@
             Profile
         </title>
         {% include css %}
-        
+        {% include js %}
+        <script>
+            $(document).ready(function(){
+                document.getElementById("id_email").value="{{ request.user.email }}"
+                document.getElementById("id_first_name").value="{{ request.user.first_name }}"
+                document.getElementById("id_last_name").value="{{ request.user.last_name }}"
+            })
+        </script>
     </head>
     <body>
         <div id="content">
             <div id='container'>
-                <a href="/account/logout"><button>Log OUT</button></a>
+                <div id="head">
+                    <span>
+                        Profile
+                    </span>
+                </div>
                 <div id="photoEditContainer">
-                    <img src="media/userProfile/{{ user.profile.photo }}">
+                    <div id="userPhoto" style="background-image: url('{{request.user.profile.photo.url}}');"></div>
                 </div>
                 <div id="profileEditContainer">
-                    <form class="profileEditForm" action="." method="post"> 
+                    <form class="profileEditForm"  enctype="multipart/form-data" action="." method="post"> 
+                        
+                        {% for field in photoEdit %}
+                            <br>
+                            <div class="innerPhoto">
+                                <br> {{ field }}
+                            </div> 
+                        {% endfor %}
+
                         {% for field in profileEdit %}
                             <br>
                             <div class="innerForm"> 
@@ -26,17 +45,12 @@
                         {% endfor %}
                         {% csrf_token %}
                         <input type="submit" value="Submit" class="inputButton" id="submitProfileButton">
-                        <button id="editProfileButton" class="inputButton" onclick="edit()">Edit</button>
+                        
                     </form>
+                    <button id="editProfileButton" class="inputButton">Edit</button>
+                    <a href="/account/logout" ><button class="inputButton">Logout </button></a>
                 </div>
             </div>
         </div>
-        {% include js %}
-        <script>
-            document.getElementById("id_email").value="{{ request.user.email }}"
-            document.getElementById("id_first_name").value="{{ request.user.first_name }}"
-            document.getElementById("id_last_name").value="{{ request.user.last_name }}"
-            
-        </script>
     </body>
 </html>
