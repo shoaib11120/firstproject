@@ -36,10 +36,12 @@ body{
 	justify-content: center;
 }
 
-.navB a{
+.navB a,.navU{
 	text-decoration: none;
 	color: white;
+	text-transform: uppercase;
 }
+
 #navP{
 	margin: 10px 20px 6px -0px;
 	background-color: red;
@@ -53,7 +55,7 @@ body{
 	width: auto;
 	height: 30vh;
   }
-  .navB{
+  .navB,.navU{
   	font-size: 15px;
   	margin: 10px;
   }
@@ -83,7 +85,7 @@ body{
 	width: auto;
 	height: 45vh;
   }
-  .navB{
+  .navB,.navU{
   	font-size: 18px;
   	margin: 10px 5px;
   }
@@ -110,7 +112,7 @@ body{
 	width: auto;
 	height: 60vh;
   }
-  .navB{
+  .navB,.navU{
   	font-size: 20px;
   	margin: 10px 10px;
   }

@@ -1,0 +1,70 @@
+body{
+    width: 100vw;
+    height: auto;
+    background-color: #2F363F;
+}
+#content{
+    width: 100%;
+    min-height:50vw ;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#container{
+    min-width: 23%;
+    min-height: 5vw;
+    background-color: #535C68;
+    border-radius: 5px;
+    text-align: center;
+    padding: 20px;
+}
+.containerToEdit{
+    min-width: 5%;
+}
+#profileEditContainer{
+    min-width: 95%;
+    height: auto;
+}
+.innerForm{
+    min-width: 100%;
+    text-align: left;
+}
+.innerForm label{
+    font-size: 18px;
+}
+.innerForm input{
+    width: 250px;
+    border: none;
+    background: transparent;
+    outline: none;
+    color: white;
+    padding: 3px;
+    margin: -6% 0 0 39%
+}
+.innerForm .inputToEdit{
+    width: 250px;
+    border:none;
+    background: transparent;
+    outline: none;
+    border-bottom: 2px solid black;
+    color:white;
+    padding: 3px;
+    margin: 2px auto 5px 15px;
+}
+.inputButton{
+    padding: 5px 10px;
+    border: none;
+    color: white;
+    border-radius: 3px;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+.inputButton:hover{
+    background-color: rgba(0, 0, 0, 0.5);
+}
+.inputButton:focus{
+    background-color: rgba(0, 0, 0, 0.7);
+}
+#submitProfileButton{
+    display: none;
+}

@@ -1,0 +1,35 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+	    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>
+            Login
+        </title>
+        {% include css %}
+    </head>
+    <body>
+        <div id="content">
+            <div id="loginContainer">
+                <div id="loginHeader">
+                    <span>
+                        Login
+                    </span>
+                </div>
+                <div id="formContainer">
+                    <form class="loginForm" action="." method="post"> 
+                        {% for field in form %}
+                            <br>
+                            <div class="innerForm"> 
+                                {{ field.errors }}
+                                {{ field.label_tag }} <br> {{ field }}
+                            </div> 
+                        {% endfor %}
+                        {% csrf_token %}
+                        <input type="submit" value="Submit">
+                    </form>
+                </div>
+                <div id="signUP">Not a user?<a href="/account/signup">Sign UP</a></div>
+            </div>
+        </div>
+    </body>
+</html>

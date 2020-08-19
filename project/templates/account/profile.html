@@ -1,0 +1,42 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+	    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>
+            Profile
+        </title>
+        {% include css %}
+        
+    </head>
+    <body>
+        <div id="content">
+            <div id='container'>
+                <a href="/account/logout"><button>Log OUT</button></a>
+                <div id="photoEditContainer">
+                    <img src="media/userProfile/{{ user.profile.photo }}">
+                </div>
+                <div id="profileEditContainer">
+                    <form class="profileEditForm" action="." method="post"> 
+                        {% for field in profileEdit %}
+                            <br>
+                            <div class="innerForm"> 
+                                {{ field.errors }}
+                                {{ field.label_tag }} <br> {{ field }}
+                            </div> 
+                        {% endfor %}
+                        {% csrf_token %}
+                        <input type="submit" value="Submit" class="inputButton" id="submitProfileButton">
+                        <button id="editProfileButton" class="inputButton" onclick="edit()">Edit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        {% include js %}
+        <script>
+            document.getElementById("id_email").value="{{ request.user.email }}"
+            document.getElementById("id_first_name").value="{{ request.user.first_name }}"
+            document.getElementById("id_last_name").value="{{ request.user.last_name }}"
+            
+        </script>
+    </body>
+</html>

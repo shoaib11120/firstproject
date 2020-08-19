@@ -5,8 +5,17 @@
 		
 		<div id="navD" class="navB"><a id="navA" href="/">HOME</a></div>
 		<div id="navD" class="navB"><a id="navA" href="/blog">BLOG</a></div>
-		<div id="navD" class="navB"><a id="navA" href="">SIGN IN</a></div>
-		<div id="navP"></div>
+
+		
+		{% if user.is_authenticated %}
+			<div id="navD" class="navU">{{ request.user.get_short_name  }}</div>
+			<a id="navA" href="/account/profile"><div id="navP" ></div></a>
+		{% else %}
+			<div id="navD" class="navB"><a id="navA" href="/account/login">LOG IN</a></div>
+		{% endif %}
+			
+
+		
 			
 	</div>
 

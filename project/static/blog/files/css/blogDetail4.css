@@ -1,0 +1,134 @@
+/* #region  common */
+
+body{
+    width: 100vw;
+    height: auto;
+    color: white;
+}
+#blogContainer{
+    margin: 60px auto;
+    width:95%;
+}
+#blogHeader{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    max-height: 25vw;
+    overflow: hidden;
+}
+.blogThumbnail{
+    width: 100%;
+    filter: brightness(90%);
+    height: auto;
+    min-height: 50vw;;
+}
+.blogTitle{
+    position: absolute;
+    font-size: xx-large;
+    font-weight: bolder;
+    font-family: cursive;
+    font-variant-caps:all-petite-caps;
+}
+#blogContents{
+    width: 95%;
+    margin: 20px;
+    
+}
+#innerContents .date{
+    font-size: 12px;
+    color: grey;
+    font-style: oblique;
+    font-family: cursive;
+}
+#blogContents .body p{
+    font-size: large;
+    font-style: normal;
+    font-family: cursive;
+}
+#innerContents{
+    display: block;
+    width: 100%;
+}
+#innerContents .share{
+    width: 15px;
+    height: 15px;
+    float: right;
+    cursor: pointer;
+}
+#blogContents{
+    background-color: #535C68;
+    border-radius: 4px;
+    padding: 8px 15px;
+}
+/* #endregion */
+
+
+
+/* #region  desktop (1281px >) */
+
+@media (min-width: 1281px) {
+
+}
+
+/* #endregion */
+
+
+
+/* #region  laptops desktopp (B/w 1025px to 1280px) */
+
+@media (min-width: 1025px) and (max-width: 1280px) {
+
+}
+
+/* #endregion */
+
+
+
+/* #region  Tablets, Ipads (portrait) (B/w 768px to 1024px) */
+
+@media (min-width: 768px) and (max-width: 1024px) {
+
+}
+
+/* #endregion */
+
+
+
+/* #region  Tablets, Ipads (landscape) (B/w 768px to 1024px) */
+
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+
+}
+
+/* #endregion */
+
+
+
+/* #region  Low Resolution Tablets, Mobiles (Landscape) ( B/w 481px to 767px)*/
+
+@media (min-width: 481px) and (max-width: 767px) {
+
+}
+
+/* #endregion */
+
+
+
+/* #region  Most of the Smartphones Mobiles (Portrait) (B/w 320px to 479px) */
+
+@media (min-width: 320px) and (max-width: 480px) {
+
+}
+
+/* #endregion */
+
+
+
+/* #region  extremely small device (Galaxy fold) */
+
+@media (max-width: 320px) {
+
+}
+
+/* #endregion */
