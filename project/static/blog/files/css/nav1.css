@@ -93,7 +93,10 @@ body {
 		width: 30px;
 		height: 30px;
 		margin: -1vw -6vw -4vw auto;
+		background-size: 30px 30px;
 		border-radius: 50%;
+		background-repeat: no-repeat;
+		background-position: center;
 	}
 }
 
@@ -125,7 +128,10 @@ body {
 		width: 30px;
 		height: 30px;
 		margin: -8px 5px;
+		background-size: 30px 30px;
 		border-radius: 50%;
+		background-repeat: no-repeat;
+		background-position: center;
 	}
 	#navC {
 		margin: 15px 5px auto auto;
@@ -160,7 +166,10 @@ body {
 		width: 35px;
 		height: 35px;
 		margin: -8px 5px;
+		background-size: 35px 35px;
 		border-radius: 50%;
+		background-repeat: no-repeat;
+		background-position: center;
 	}
 }
 

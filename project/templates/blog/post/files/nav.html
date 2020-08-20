@@ -1,11 +1,26 @@
- 
+ {% load static %}
 <div id="nav">
 	<div id="compN"><span onclick="blogdetail('/')"><B>PROFESSIONAL</B></span></div>
 	<div id="navC">
 		
 		<div class="navB"><a href="/">HOME</a></div>
 		<div class="navB"><a href="/blog">BLOG</a></div>
-		<div id="navP" style="background-color:red;"></div>
+		
+		{% if request.user.profile.photo %}
+			
+			<a id="navA" href="/account/profile" target="_blank">
+				<div id="navP" href="/account/profile" style="background-image:url('{{request.user.profile.photo.url}}');"></div>
+			</a>
+			
+		{% else %}
+
+			<a id="navA" href="/account/profile" target="_blank">
+				<div id="navP" href="/account/profile" style="background-image:url('{% static 'assets/userDefault.png' %}');"></div>
+			</a>
+
+		{% endif %}
+			
+		
 			
 	</div>
 

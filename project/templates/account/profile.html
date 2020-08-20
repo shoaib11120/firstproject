@@ -7,11 +7,21 @@
         </title>
         {% include css %}
         {% include js %}
+        {% load static %}
         <script>
             $(document).ready(function(){
                 document.getElementById("id_email").value="{{ request.user.email }}"
                 document.getElementById("id_first_name").value="{{ request.user.first_name }}"
                 document.getElementById("id_last_name").value="{{ request.user.last_name }}"
+                $("#id_photo").change(function(e){
+                    try {
+                        var fileName = e. target. files[0]. name;
+                        $("#photoChooseButton").text(fileName)
+                    }
+                    catch(err) {
+                        $("#photoChooseButton").text("Choose");
+                    }
+                })
             })
         </script>
     </head>
@@ -24,17 +34,24 @@
                     </span>
                 </div>
                 <div id="photoEditContainer">
-                    <div id="userPhoto" style="background-image: url('{{request.user.profile.photo.url}}');"></div>
+
+                    {% if request.user.profile.photo %}
+                        <div id="userPhoto" style="background-image: url('{{request.user.profile.photo.url}}');"></div> 
+                    {% else %}
+                        <div id="userPhoto" style="background-image: url('{% static 'assets/userDefault.png' %}');"></div>
+                    {% endif %}
+
+                    <label id="photoChooseButton" for="id_photo">Choose</label>
                 </div>
                 <div id="profileEditContainer">
                     <form class="profileEditForm"  enctype="multipart/form-data" action="." method="post"> 
                         
-                        {% for field in photoEdit %}
-                            <br>
-                            <div class="innerPhoto">
-                                <br> {{ field }}
-                            </div> 
-                        {% endfor %}
+                        <div id="formPhoto">
+                                <br>
+                                <div class="innerPhoto">
+                                    <br> {{ photoEdit.photo }}
+                                </div> 
+                        </div>
 
                         {% for field in profileEdit %}
                             <br>

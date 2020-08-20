@@ -44,10 +44,12 @@ body{
 
 #navP{
 	margin: 10px 20px 6px -0px;
-	background-color: red;
+	background-position: center;
+	background-repeat: no-repeat;
 	width: 30px;
 	height: 30px;
 	border-radius: 50%;
+	background-size: 30px 30px;
 }
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 500px) {
@@ -60,7 +62,8 @@ body{
   	margin: 10px;
   }
   #navP{
-  	margin: 3px 20px 10px -5px;
+	  margin: 3px 20px 10px -5px;
+	  background-size: 20px 20px;
   }
   #latestC{
   	height: 40vh;

@@ -5,7 +5,7 @@ body{
 }
 #content{
     width: 100%;
-    min-height:50vw ;
+    min-height:100% ;
     height: auto;
     display: flex;
     justify-content: center;
@@ -75,8 +75,21 @@ body{
     height: 150px;
     background-size: 150px 150px;
     border-radius: 50%;
+    margin-bottom: 10px;
     filter: brightness(0.7);
 }
-.innerPhoto input{
+#formPhoto .innerPhoto ,#formPhoto{
+    height: 0px;
+    width: 0px;
+    display: none;
+}
+#photoChooseButton{
+    padding: 2px 7px;
+    width: fit-content;
+    color: white;
+    border-radius: 3px;
+    background-color: rgba(0,0,0,0.5);
+    cursor: pointer;
+    font-size: 0.9em;
     display: none;
 }

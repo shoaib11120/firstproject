@@ -1,4 +1,4 @@
- 
+ {% load static %}
 <div id="nav">
 
 	<div id="navC">
@@ -9,7 +9,21 @@
 		
 		{% if user.is_authenticated %}
 			<div id="navD" class="navU">{{ request.user.get_short_name  }}</div>
-			<a id="navA" href="/account/profile"><div id="navP" ></div></a>
+
+			{% if request.user.profile.photo %}
+			
+				<a id="navA" href="/account/profile" target="_blank">
+					<div id="navP" style="background-image:url('{{request.user.profile.photo.url}}');"></div>
+				</a>
+				
+			{% else %}
+
+				<a id="navA" href="/account/profile" target="_blank">
+					<div id="navP" style="background-image:url('{% static 'assets/userDefault.png' %}');"></div>
+				</a>
+
+			{% endif %}
+
 		{% else %}
 			<div id="navD" class="navB"><a id="navA" href="/account/login">LOG IN</a></div>
 		{% endif %}
