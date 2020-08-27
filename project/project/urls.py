@@ -22,17 +22,12 @@ from . import views
 
 
 urlpatterns = [
+      path('',views.home,name='home'),
       path('admin/', admin.site.urls),
-      path('blog/',
-      	include('blog.urls',
-      		namespace='blog')),
-      path('account/',
-      	include('account.urls')),
-      path('',
-        views.home,
-        name='home')
+      path('blog/',include('blog.urls',namespace='blog')),
+      path('api/blog/',include('blog.api.urls',namespace='blog_api')),
+      path('account/',include('account.urls','account')),
 ]
 
 if settings.DEBUG:
-  urlpatterns += static(settings.MEDIA_URL,
-    document_root=settings.MEDIA_ROOT)
+  urlpatterns += static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT)

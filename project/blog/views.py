@@ -30,6 +30,8 @@ def post_list(request):
 
 # endregion
 
+
+
 # region post detail
 
 def post_detail(request,year,month,day,post):
@@ -46,6 +48,8 @@ def post_detail(request,year,month,day,post):
 		'css':'blog/post/files/blogDetailCss.html'})
 
 # endregion
+
+
 
 # region Post Share
 

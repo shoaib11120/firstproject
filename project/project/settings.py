@@ -24,7 +24,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '33f=%@$*7e)q41_v3$t@6a-b+f&q38teuz6864lyq_8y76bjb%'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['*']
 
@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'rest_framework',
     'blog.apps.BlogConfig',
     'account.apps.AccountConfig',
 ]
@@ -116,6 +117,7 @@ USE_L10N = True
 
 USE_TZ = True
 
+# region  static and media files
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
@@ -130,11 +132,11 @@ STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'static/account/files/'),
 )
 
+MEDIA_ROOT = os.path.join(BASE_DIR,'media/')
 MEDIA_URL = '/media/'
-MEDIA_ROOT = os.path.join(BASE_DIR,
-    'media')
 
-AUTH_PROFILE_MODULE = 'project.UserProfile'
+# endregion
+
 
 # region sendingEmails
 
