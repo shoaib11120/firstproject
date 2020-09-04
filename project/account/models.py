@@ -3,6 +3,9 @@ from django.db import models
 from django.conf import settings
 from uuid import uuid4
 import os
+from django.db.models.signals import post_save
+from django.dispatch import receiver
+from rest_framework.authtoken.models import Token
 
 
 #change image name
@@ -24,3 +27,10 @@ class OverwriteStorage(FileSystemStorage,):
 class Profile(models.Model):
         user = models.OneToOneField(settings.AUTH_USER_MODEL,on_delete=models.CASCADE)
         photo = models.ImageField(upload_to=path_and_rename,blank=True,null=True,storage=OverwriteStorage())
+
+
+
+@receiver(post_save , sender=settings.AUTH_USER_MODEL)
+def createAuthToken(sender, instance=None, created=False, **kwargs):
+    if created:
+        Token.objects.create(user=instance)

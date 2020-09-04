@@ -17,6 +17,6 @@ urlpatterns = [
 		apiPostDetailDelete,
 		name='post_detail_delete'),
 	path('',
-		apiPostList,
+		apiPostList.as_view(),
 		name='post_list'),
 ]

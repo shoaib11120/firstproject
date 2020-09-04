@@ -10,7 +10,7 @@
     {% else %}
         <div class="shareHeader">
             <span>
-                Share "{{ post.title }}" by e-mail
+                Share "{{ post.title|truncatewords:3 }}" by e-mail
             </span> 
         </div>
         <form class="shareForm" action="." method="post"> 

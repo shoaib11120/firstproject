@@ -27,6 +27,7 @@ urlpatterns = [
       path('blog/',include('blog.urls',namespace='blog')),
       path('api/blog/',include('blog.api.urls',namespace='blog_api')),
       path('account/',include('account.urls','account')),
+      path('api/account/',include('account.api.urls',namespace='account_api')),
 ]
 
 if settings.DEBUG:
